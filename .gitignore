@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.DS_Store
+.env
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+.kiro/
+.idea/
+.vscode/
+.agents/

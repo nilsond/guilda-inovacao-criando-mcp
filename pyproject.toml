@@ -1,0 +1,31 @@
+[project]
+name = "vestuario-mcp"
+version = "0.1.0"
+description = "Servidor MCP que simula o backend de um e-commerce de roupas: catálogo, carrinho com reserva de estoque e pedidos."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Nilson Damasio", email = "nilson.damasio.dev@gmail.com" }]
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]==2.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/nilsond/guilda-inovacao-criando-mcp"
+Issues = "https://github.com/nilsond/guilda-inovacao-criando-mcp/issues"
+
+[dependency-groups]
+dev = [
+    "pytest==8.4.2",
+]
+
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vestuario_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
